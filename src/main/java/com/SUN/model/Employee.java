@@ -20,5 +20,4 @@ public class Employee {
     public void setLastName(String lastName) {
     }
 
-    // Constructors, getters, and setters
 }

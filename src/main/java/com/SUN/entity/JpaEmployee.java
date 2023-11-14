@@ -16,5 +16,4 @@ public class JpaEmployee {
     private String lastName;
     private String department;
 
-    // Constructors, getters, and setters
 }

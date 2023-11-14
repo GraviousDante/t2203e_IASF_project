@@ -12,26 +12,23 @@ import java.util.List;
 public class EmployeeService<JpaEmployeeRepository> {
 
     @Autowired
-    private EmployeeRepository employeeRepository;  // MongoDB repository
+    private EmployeeRepository employeeRepository;
 
     @Autowired
-    private JpaEmployeeRepository jpaEmployeeRepository;  // JPA repository
+    private JpaEmployeeRepository jpaEmployeeRepository;
 
-    // Method to create an employee
     public void createEmployee(String firstName, String lastName, String department) {
         Employee employee = new Employee();
         employee.setFirstName(firstName);
         employee.setLastName(lastName);
-        employeeRepository.save(employee);  // Save to MongoDB
+        employeeRepository.save(employee);
     }
 
-    // Method to find all employees
     public List<Employee> findAllEmployees() {
-        return employeeRepository.findAll();  // Find all from MongoDB
+        return employeeRepository.findAll();
     }
 
-    // Method to find all employees using JPA
     public List<JpaEmployee> findAllJpaEmployees() {
-        return jpaEmployeeRepository.findAll();  // Find all from JPA
+        return jpaEmployeeRepository.findAll();
     }
 }
